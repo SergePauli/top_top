@@ -1,0 +1,3 @@
+curl -d '{"name":"User1", "password":"pass1"}' -H 'Content-Type: application/json' 
+  http://localhost:3000/login
+  

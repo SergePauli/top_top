@@ -51,12 +51,47 @@ _(commit ec11fc1f140da124b31b5e3c0638c5b8e76afbe2)_
 
 создаем файл /app/extras/json_web_token.rb c методами "generate_token" и "validate_token"  
 
-_(commit 14eb6a9d60be7b4ab0ea3e0c35a7e1129f9b305f)_
+_(commit 7130e8955e7e9dc518b8d91b5594b5e681aaab85)_
 
 
 ### Шаг 5. Контроллер сессий
 
-запускаем создание файлов контроллера и его теста:  
+запускаем создание файлов контроллера сессий и его теста:  
     $ rails g controller Sessions
 
 создаем метод "create" в /app/controllers/sessions_controller.rb
+
+_(commit 02c288a39a44af724bf1dc7f2581800a329c0b5d)_
+
+### Шаг 6. Контроллер сообщений
+
+запускаем создание файлов контроллера сообщений и его теста:  
+    $ rails g controller Messages
+
+создаем метод "index" в /app/controllers/messages_controller.rb
+
+_(commit c9b68391c2a1e3e8469a28d753abadd71c2fb1b9)_
+
+### Шаг 7. Открываем эндпоинты приложения
+
+добавляем роуты для наших эндпоинтов в /config/routes.rb
+
+_(commit 0b5c5c126dfdece9816a3a244bed02744f033ee9)_
+
+### Шаг 8. Заполняем базу данных 
+
+создаем сценарий авто-заполнения  в /db/seeds.rb
+
+запускаем заполнение:  
+    $ rails db:seed
+
+_(commit 7a194b383dbedde4601218a78cafe2abe85b5b36)_    
+
+### Шаг 9. Тестируем эндпоинты
+
+запускаем приложение:  
+    $ rails s
+
+создаем скрипты (login,send,list) для запросов через curl в 
+папке /test и запускаем их посредством расширения VSCode
+
