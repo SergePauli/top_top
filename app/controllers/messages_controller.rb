@@ -26,6 +26,6 @@ class MessagesController < ApplicationController
     header = request.headers["Authorization"]
     token = header[7..500] if !!header
     @user_id = JsonWebToken.validate_token(token) if !!token
-    render status: :unauthorized unless @user_id
+    render status: :unauthorized unless @user_id && @user_id != (-1)
   end
 end

@@ -17,10 +17,14 @@ class JsonWebToken
 
     # валидируем токен
     def validate_token(token)
-      body = JWT.decode(token, SECRET)[0]
-      body = HashWithIndifferentAccess.new body
-      ## возвращаем ID пользователя
-      body["data"]
+      begin
+        body = JWT.decode(token, SECRET)[0]
+        body = HashWithIndifferentAccess.new body
+        ## возвращаем ID пользователя
+        body["data"]
+      rescue JWT::ExpiredSignature
+        return -1
+      end
     end
   end
 end
