@@ -62,7 +62,8 @@ _(commit 7130e8955e7e9dc518b8d91b5594b5e681aaab85)_
 
 ### Шаг 5. Контроллер сессий
 
-запускаем создание файлов контроллера сессий и его теста:  
+запускаем создание файлов контроллера сессий и его теста: 
+ 
     $ rails g controller Sessions
 
 создаем метод "create" в /app/controllers/sessions_controller.rb

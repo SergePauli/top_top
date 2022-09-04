@@ -1,9 +1,43 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  content: MyString
+  content: Сообщение_0
   user: one
 
 two:
-  content: MyString
+  content: Сообщение_1
   user: two
+
+one1:
+  content: Сообщение_2
+  user: one
+
+two1:
+  content: Сообщение_3
+  user: two
+
+one2:
+  content: Сообщение_4
+  user: one
+
+two2:
+  content: Сообщение_5
+  user: two  
+
+one3:
+  content: Сообщение_6
+  user: one
+
+two3:
+  content: Сообщение_7
+  user: two
+
+one4:
+  content: Сообщение_8
+  user: one
+
+two4:
+  content: Сообщение_9
+  user: two  
+
+

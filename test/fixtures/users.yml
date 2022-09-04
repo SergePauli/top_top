@@ -1,9 +1,12 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  password_digest: MyString
-
+  id: 1
+  name: User0
+  password_digest: $2a$12$c/mpF1EmGv9hSdcmsSat4e62ifQoN/.wHMB5m68POtAv3MJqJBngi
+  
 two:
-  name: MyString
-  password_digest: MyString
+  id: 2
+  name: User1
+  password_digest: $2a$12$HykqE3jZU.IedYtD7lNmW.gl81w/Z1G2TuPFTuR0D35xwmqYsrTPG
+  
