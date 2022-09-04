@@ -7,18 +7,20 @@ class JsonWebToken
   # используем singetone патерн для класса
   class << self
     # генерируем токен
-    def generate_token
+    def generate_token(user_id)
       ## задаем период действия токена
       exp = 144.hours.from_now.to_i
-      exp_payload = { data: session[:user_id], exp: exp }
+      exp_payload = { data: user_id, exp: exp }
       ## генерируем и сохраняем токен в данных сессии
-      session[:token] = JWT.encode exp_payload, Rails.application.secrets.secret_key_base
+      JWT.encode exp_payload, Rails.application.secrets.secret_key_base
     end
 
     # валидируем токен
     def validate_token(token)
       body = JWT.decode(token, SECRET)[0]
-      HashWithIndifferentAccess.new body
+      body = HashWithIndifferentAccess.new body
+      ## возвращаем ID пользователя
+      body["data"]
     end
   end
 end
