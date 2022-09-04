@@ -21,11 +21,16 @@
 
 Добавление зависимости в Gemfile:
 
-  для Active Model has_secure_password хелпера
+для Active Model has_secure_password хелпера
+
     gem "bcrypt", "~> 3.1.7"
-  для работы с JWT токенами
-    gem "jwt"    
+
+для работы с JWT токенами
+
+    gem "jwt"  
+
 Проверяем загрузку зависимостей 
+
     $ bundle    
 
 
@@ -41,7 +46,8 @@ _(commit ec11fc1f140da124b31b5e3c0638c5b8e76afbe2)_
         has_secure_password
     end  
 
-запускаем создание базы данных и загрузку миграций:  
+запускаем создание базы данных и загрузку миграций: 
+
     $ rails db:create
     $ rails db:migrate    
 
@@ -65,7 +71,8 @@ _(commit 02c288a39a44af724bf1dc7f2581800a329c0b5d)_
 
 ### Шаг 6. Контроллер сообщений
 
-запускаем создание файлов контроллера сообщений и его теста:  
+запускаем создание файлов контроллера сообщений и его теста: 
+
     $ rails g controller Messages
 
 создаем метод "index" в /app/controllers/messages_controller.rb
@@ -82,7 +89,8 @@ _(commit 0b5c5c126dfdece9816a3a244bed02744f033ee9)_
 
 создаем сценарий авто-заполнения  в /db/seeds.rb
 
-запускаем заполнение:  
+запускаем заполнение:
+
     $ rails db:seed
 
 _(commit 7a194b383dbedde4601218a78cafe2abe85b5b36)_    
@@ -90,8 +98,10 @@ _(commit 7a194b383dbedde4601218a78cafe2abe85b5b36)_
 ### Шаг 9. Тестируем эндпоинты
 
 запускаем приложение:  
+
     $ rails s
 
 создаем скрипты (login,send,list) для запросов через curl в 
 папке /test и запускаем их посредством расширения VSCode
 
+_(commit 7a194b383dbedde4601218a78cafe2abe85b5b36)_
