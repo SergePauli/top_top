@@ -1,2 +1,16 @@
-curl -d '{"name":"User1", "message":"тестовое с curl"}' -H 'Content-Type: application/json' 
--H 'Authorization: Bearer_eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoyLCJleHAiOjE2NjI3MzA0OTd9.48_RuNzKGbLyi-mySLxRyicwxIZ_6Ocs7TT7ZzAo7n4'  http://localhost:3000/message
+curl -d '{"name":"User1", "message":"тестовое с curl"}' -H 'Content-Type: application/json' -H 'Authorization: Bearer_eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoyLCJleHAiOjE2NjI4MTA1OTd9.j_g_vis3jB1jLTinVBHcwj6I2XX1-ZBdKb24TKkHI-s'  http://172.17.0.2:3000/message
+
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: text/plain; charset=utf-8
+ETag: W/"36a9e7f1c95b82ffb99743e0c5c4ce95"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: 468bf923-cd95-483f-a70c-e1544e00b940
+X-Runtime: 0.023163
+Connection: close
+Transfer-Encoding: chunked

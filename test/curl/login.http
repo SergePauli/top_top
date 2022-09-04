@@ -1,3 +1,21 @@
 curl -d '{"name":"User1", "password":"pass1"}' -H 'Content-Type: application/json' 
-  http://localhost:3000/login
-  
+  http://172.17.0.2:3000/login
+
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/json; charset=utf-8
+ETag: W/"ecef3e881f1d6b8eb857ddc5d1390347"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: d2520ae5-6b8a-44ce-87f0-562c0da8cb93
+X-Runtime: 0.294594
+Connection: close
+Transfer-Encoding: chunked
+
+{
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoyLCJleHAiOjE2NjI4MTA1OTd9.j_g_vis3jB1jLTinVBHcwj6I2XX1-ZBdKb24TKkHI-s"
+}

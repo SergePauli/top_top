@@ -1,2 +1,62 @@
 curl -d '{"name":"User1", "message":"history 10"}' -H 'Content-Type: application/json' 
--H 'Authorization: Bearer_eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoyLCJleHAiOjE2NjI3MzA0OTd9.48_RuNzKGbLyi-mySLxRyicwxIZ_6Ocs7TT7ZzAo7n4'  http://localhost:3000/message
+-H 'Authorization: Bearer_eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjoyLCJleHAiOjE2NjI4MTA1OTd9.j_g_vis3jB1jLTinVBHcwj6I2XX1-ZBdKb24TKkHI-s'  http://172.17.0.2:3000/message
+
+HTTP/1.1 200 OK
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Referrer-Policy: strict-origin-when-cross-origin
+Content-Type: application/json; charset=utf-8
+ETag: W/"872c9c2fb0f110b690a09043f75c68a8"
+Cache-Control: max-age=0, private, must-revalidate
+X-Request-Id: ffb0c5a5-de1a-45b5-bc7d-b2a004c29881
+X-Runtime: 0.009796
+Connection: close
+Transfer-Encoding: chunked
+
+{
+  "messages": [
+    {
+      "name": "User0",
+      "message": "сообщение 1"
+    },
+    {
+      "name": "User1",
+      "message": "сообщение 2"
+    },
+    {
+      "name": "User0",
+      "message": "сообщение 3"
+    },
+    {
+      "name": "User1",
+      "message": "сообщение 4"
+    },
+    {
+      "name": "User0",
+      "message": "сообщение 5"
+    },
+    {
+      "name": "User1",
+      "message": "сообщение 6"
+    },
+    {
+      "name": "User0",
+      "message": "сообщение 7"
+    },
+    {
+      "name": "User1",
+      "message": "сообщение 8"
+    },
+    {
+      "name": "User0",
+      "message": "сообщение 9"
+    },
+    {
+      "name": "User1",
+      "message": "тестовое с curl"
+    }
+  ]
+}
