@@ -15,9 +15,15 @@ class MessagesController < ApplicationController
       messages = Message.includes(:user).last(10)
       render json: { messages: messages.map { |message| { name: message.user.name, message: message.content } } }, status: :ok
     else
-      ## сохраняем сообщение в базу
-      message = Message.new(user_id: @user_id, content: params[:message])
-      render status: :ok if !!message && message.save!
+      user = User.find_by(name: params[:name])
+      ## проверка на несуществующего пользователя
+      if user.blank?
+        render status: :not_found
+      else
+        ## сохраняем сообщение в базу
+        message = Message.new(user_id: user.id, content: params[:message])
+        render status: :ok if !!message && message.save!
+      end
     end
   end
 

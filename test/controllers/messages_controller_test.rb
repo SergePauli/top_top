@@ -15,6 +15,12 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
     assert_equal true, Message.where(content: "test").where(user: users(:one)).count === 1
   end
 
+  test "can't save message from invalid user" do
+    post "/message",
+      params: { name: "User5", message: "test" }, headers: { Authorization: "Bearer_#{JsonWebToken.generate_token(users(:one).id)}" }
+    assert_response :not_found
+  end
+
   test "get last ten messages" do
     post "/message",
       params: { name: "User1", message: "history 10" }
