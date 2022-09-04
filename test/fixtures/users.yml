@@ -3,8 +3,7 @@
 one:
   id: 1
   name: User0
-  password_digest: $2a$12$c/mpF1EmGv9hSdcmsSat4e62ifQoN/.wHMB5m68POtAv3MJqJBngi
-  
+  password_digest: $2a$12$c/mpF1EmGv9hSdcmsSat4e62ifQoN/.wHMB5m68POtAv3MJqJBngi  
 two:
   id: 2
   name: User1
