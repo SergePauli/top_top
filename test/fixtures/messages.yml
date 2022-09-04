@@ -2,42 +2,42 @@
 
 one:
   content: Сообщение_0
-  user: one
+  user_id: 1
 
 two:
   content: Сообщение_1
-  user: two
+  user_id: 2
 
 one1:
   content: Сообщение_2
-  user: one
+  user_id: 1
 
 two1:
   content: Сообщение_3
-  user: two
+  user_id: 2
 
 one2:
   content: Сообщение_4
-  user: one
+  user_id: 1
 
 two2:
   content: Сообщение_5
-  user: two  
+  user_id: 2  
 
 one3:
   content: Сообщение_6
-  user: one
+  user_id: 1
 
 two3:
   content: Сообщение_7
-  user: two
+  user_id: 2
 
 one4:
   content: Сообщение_8
-  user: one
+  user_id: 1
 
 two4:
   content: Сообщение_9
-  user: two  
+  user_id: 2  
 
 
